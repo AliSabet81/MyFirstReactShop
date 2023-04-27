@@ -1,0 +1,15 @@
+.productSlider{
+    width: 914px !important;
+    height: 633px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    right:10px;
+    padding: 30px;
+    color:  #666666!important;
+    fill: #666666 !important;
+    stroke: #666666 !important;
+}
+/* .sizes{
+    width: 430px;
+} */

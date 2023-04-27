@@ -1,0 +1,38 @@
+
+.Overlay {
+    position: fixed;
+    /* overflow: hidden; */
+    height: 100%;
+    top: -16px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(107, 107, 107, 0.155);
+  }
+  /* .modal-kiri {
+    top: '0%';
+    left: '0%';
+    right: 'auto';
+    bottom: 'auto';
+    margin-right: '-50%';
+    transform: 'translate(-50%, -50%)';
+    transition: all 3s ease-in;
+  } */
+  .ReactModal__Overlay {
+    opacity: 0;
+    position: fixed;
+    right: -1000px;
+    transition: all 1s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    position: fixed;
+    right: 0px;
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    position: fixed;
+    left: -1000px;
+    opacity: 0;
+}
