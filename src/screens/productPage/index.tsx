@@ -7,15 +7,27 @@ import product4 from "../../assets/images/product1/productSlide4.png"
 import product5 from "../../assets/images/product1/productSlide5.png"
 import { Button } from "@/components";
 import React from "react";
+import ProductDesc from "@/components/productDesc";
+import ReviewCard from "@/components/card/reviewsCard";
+import { menCategoryProducts } from "@/products/menCategoryproduct";
+import ProductCard from "@/components/card/productCard";
+import { Link } from "react-router-dom";
+import SimilarProduct from "@/components/SimilarProduct";
 
-const ProductPage = () => {
-    const [price , setPrice] = React.useState(2200)
+interface IProductPage{
+    src ?: string
+    name ?:string
+    price ?:number
+}
+
+const ProductPage = (props:IProductPage) => {
+    const [price , setPrice] = React.useState(props.price)
     const [count , setcount] = React.useState(1)
     return ( 
         <div className="container m-auto p-5">
             <div className="flex gap-20">
                 <div className="productSlider">
-                    <SwiperThumbs src={[product1,product2,product3,product4,product5,product1,product3,product4]}></SwiperThumbs>
+                    <SwiperThumbs src={[props.src,product2,product3,product4,product5,product1,product3,product4]}></SwiperThumbs>
                 </div>
                 <div className="flex flex-col gap-5">
                     <h1 className="text-2xl font-bold text-gray-500 text-center">Wild Rider SC</h1>
@@ -55,7 +67,7 @@ const ProductPage = () => {
                     </div>
                     <div>
                         <h2 className="text-lg font-medium mb-2">price :</h2>
-                        <h2 className="text-lg font-medium">2200$</h2>
+                        <h2 className="text-lg font-medium">{props.price}</h2>
                     </div>
                     <div className="h-12 flex justify-between">
                         <span className="text-lg font-medium">Season: spring.autumn</span>
@@ -66,6 +78,15 @@ const ProductPage = () => {
                         <button className="bg-violet-900 text-white text-lg font-bold px-10 py-2 rounded-md">Buy</button>
                     </div>
                 </div>
+            </div>
+            <ProductDesc/>
+            <h1 className="text-4xl font-medium text-center my-11">Reviews</h1>
+            <div className="grid grid-cols-3 gap-20">
+                <ReviewCard/><ReviewCard/><ReviewCard/>
+            </div>
+            <button className="py-2.5 px-24 text-2xl block mx-auto my-16 font-bold border-black border rounded-lg">Leave feedback</button>
+            <h1 className="text-4xl font-medium text-center">Similar products</h1>
+            <div className="grid grid-cols-3 gap-24 mt-12 mb-48">
             </div>
         </div>
      );

@@ -1,7 +1,7 @@
 import ProductPage from "@/screens/productPage"
 import { ReactElement } from "react"
 
-interface IMenProduct{
+interface ISimilarProduct{
     src : string
     name :string
     price :number
@@ -15,7 +15,7 @@ export const ROUTES ={
     menProduct3 : "/p-123",
 }
 
-export const menCategoryProducts:IMenProduct[] = [
+export const similarProduct:ISimilarProduct[] = [
     {
         src:"MenProduct1.png" ,
         name:"Mirage Sport Pronounce",

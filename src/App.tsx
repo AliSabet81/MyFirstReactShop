@@ -12,6 +12,7 @@ import PrudoctSwioer from './components/productSwiper';
 import SwiperThumbs from './components/productSwiper';
 import { homeslideproduct } from './products/homeSlideProducts';
 import { menCategoryProducts } from './products/menCategoryproduct';
+import { homeDiscount } from './products/homeDiscount';
 
 
 const App = () => {
@@ -33,6 +34,9 @@ const App = () => {
           <Route key={e.path} path={e.path} element={e.element}/>
         ))}
         {menCategoryProducts.map((e)=>(
+          <Route key={e.path} path={e.path} element={e.element}/>
+        ))}
+        {homeDiscount.map((e)=>(
           <Route key={e.path} path={e.path} element={e.element}/>
         ))}
       </Routes>

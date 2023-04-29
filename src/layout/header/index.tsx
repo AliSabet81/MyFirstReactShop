@@ -1,6 +1,6 @@
 import SettingModal from "@/Modals/setting"
 import SignModalComponent from "@/Modals/sign"
-import { Logo, MenuSvgIcone, SearchSvgIcon, SettingSvgIcone, SignSvgIcone, } from "@/assets/svgs"
+import { CartSvgIcone, Logo, MenuSvgIcone, SearchSvgIcon, SettingSvgIcone, SignSvgIcone, } from "@/assets/svgs"
 import { Textfield,Button } from "@/components"
 import ModalComponent from "@/components/modal"
 import { useState } from "react"
@@ -19,6 +19,7 @@ export const Header = () =>{
     </Button> */}
     <SignModalComponent className="hidden md:flex"/>
     <span className="hidden md:inline text-white h-full bg-white border"></span>
+    <Button variant="menu" icone={<CartSvgIcone/>} name="Cart"/>
     <div className="hidden md:flex">
     <ModalComponent name="Settings" icone={<SettingSvgIcone/>}><SettingModal/></ModalComponent>
     </div>

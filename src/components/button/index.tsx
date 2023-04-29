@@ -20,8 +20,8 @@ export const Button = (props:IButten) =>{
         )
         case "menu": return(
             <button {...props} className={`${props.className} flex items-center h-12 w-28 justify-between`}>
-                <span className="text-white font-bold text-lg">{props.name}</span>
                 <span className="p-2.5">{props.icone}</span>
+                <span className="text-white font-bold text-lg">{props.name}</span>
             </button>
         )
         case "size": return(

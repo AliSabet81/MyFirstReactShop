@@ -1,7 +1,6 @@
 import HomeScreen from "@/screens/home";
 import ProductPage from "@/screens/productPage";
 import { ReactElement } from "react"
-
 type ProductType = {
     src ?: string;
     path : string;
@@ -21,25 +20,25 @@ export const homeslideproduct:ProductType[] = [
     {
         src: "homeSlide1.png",
         path:ROUTES.product1,
-        element : <ProductPage/>
+        element : <ProductPage price={2000} src="homeSlide1.png"/>
     },
     {
         src: "homeSlide2.png",
         path:ROUTES.product2,
-        element : <h1>hello</h1>
+        element : <ProductPage price={2000} src="homeSlide2.png"/>
     },
     {
         src: "homeSlide3.png",
         path:ROUTES.product3,
-        element : <h1>hello</h1>
+        element : <ProductPage price={2000} src="homeSlide3.png"/>
     },
     {
         src: "homeSlide4.png",
         path:ROUTES.product4,
-        element : <h1>hello</h1>
+        element : <ProductPage price={2000} src="homeSlide4.png"/>
     },{
         src: "homeSlide5.png",
         path:ROUTES.product5,
-        element : <h1>hello</h1>
+        element : <ProductPage price={2000} src="homeSlide5.png"/>
     },
 ]

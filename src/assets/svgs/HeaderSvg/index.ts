@@ -4,6 +4,8 @@ export { ReactComponent as SearchSvgIcon } from "./searchSvgIcon.svg";
 export { ReactComponent as SignSvgIcone } from "./signSvgIcone.svg";
 export { ReactComponent as SettingSvgIcone } from "./settingSvgIcon.svg";
 export { ReactComponent as MenuSvgIcone } from "./menuSvgIcon.svg";
+export { ReactComponent as CartSvgIcone } from "./cartSvgIcon.svg";
+
 
 
 

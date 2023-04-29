@@ -64,7 +64,7 @@ const SignModalComponent = (props: modalType) => {
       <button onClick={openModal} {...props} className={`${props.className} flex items-center h-12 w-44 justify-between`}>
                 <span className="p-2.5">{<SignSvgIcone/>}</span>
                 <span className="text-white font-bold text-lg">Регистрация</span>
-            </button>
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

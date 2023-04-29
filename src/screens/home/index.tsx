@@ -8,6 +8,7 @@ import CategoryCard from "@/components/card/categoryCard";
 import HomeAboutUs from "@/components/homeAboutUs";
 import DiscountCard from "@/components/card/discountCard";
 import { homeDiscount } from "@/products/homeDiscount";
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   
@@ -22,7 +23,7 @@ const HomeScreen = () => {
             <HomeAboutUs></HomeAboutUs>
             <h1 className="text-center text-4xl font-bold mt-10 mb-16">News and promotions</h1>
             <div className="container m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 justify-items-center gap-20">
-            {homeDiscount.map((element)=><DiscountCard src={element.src}></DiscountCard>)}
+            {homeDiscount.map((element)=><Link to={element.path}><DiscountCard src={element.src}></DiscountCard></Link>)}
             </div>
         </div>
     )
